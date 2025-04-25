@@ -1,42 +1,51 @@
 <!DOCTYPE html>
-
-  <html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="style.css">
-
-    <title>Home Page</title>
-
-  </head>
-
-  <body>
-<script src="script.js"></script>
-    <header>
-      <h1> My website</h1>
-    </header>
-
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bangla News 24</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Bangla News 24</div>
     <nav>
-
       <ul>
-
-        <li><a href="#home">home</a></li>
-
-        <li><a href="#about">about us</a></li>
-
-        <li><a href="#contact">contact us</a></li>
-        
-        <li><a href="#blog">blogs</a></li>
-     </ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Politics</a></li>
+        <li><a href="#">Economy</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="#">Entertainment</a></li>
+      </ul>
     </nav>
+    <button id="modeToggle">Dark Mode</button>
+  </header>
 
-    <section id="#home">
-      <h2>Home</h2>
-      <p>Hi wassup it's Dhruba ,, always there for you, this is my first web site i would like to post many blogs news etc here.</p>
-      </section>
-        
-          </body>
-            
-              </html>
+  <main>
+    <section class="featured">
+      <h1>Breaking News: Education Reform Announced!</h1>
+      <p>The Ministry of Education has announced major changes...</p>
+    </section>
+
+    <section class="news-section">
+      <div class="news-card">
+        <img src="https://via.placeholder.com/400x200" alt="News Image">
+        <h3>International Relations Strengthen</h3>
+        <p>Bangladesh has signed a new deal with ASEAN countries...</p>
+      </div>
+      <div class="news-card">
+        <img src="https://via.placeholder.com/400x200" alt="News Image">
+        <h3>Cricket: Tigers Win Again!</h3>
+        <p>In a thrilling match, Bangladesh beat India by 4 wickets...</p>
+      </div>
+      <!-- Add more news cards -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bangla News 24. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
