@@ -52,9 +52,10 @@ header {
 /* Navbar scroll container */
 .nav-scroll {
   overflow-x: auto;
+  overflow-y: hidden;
   white-space: nowrap;
   max-width: 100%;
-  scrollbar-width: none;
+  flex: 1;
 }
 
 .nav-scroll::-webkit-scrollbar {
@@ -62,12 +63,11 @@ header {
 }
 
 nav ul {
-  list-style: none;
-  display: flex;
+  display: inline-flex;
   gap: 0.6rem;
-  flex-wrap: nowrap;
   padding: 0;
   margin: 0;
+  min-width: max-content;
 }
 
 /* Nav item with quotes and period */
@@ -76,18 +76,6 @@ nav li {
   font-weight: 500;
   white-space: nowrap;
   position: relative;
-}
-
-nav li::before {
-  content: '“';
-}
-
-nav li::after {
-  content: '”.';
-}
-
-nav li:last-child::after {
-  content: '”'; /* no period for the last item */
 }
 
 nav a {
