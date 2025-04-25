@@ -7,7 +7,7 @@
 
 body {
   background: #f5f5f5;
-  color: #333;
+  color: white;
   transition: 0.3s;
 }
 
@@ -30,7 +30,6 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 1.5rem;
-  overflow-x:auto;
 }
 
 nav a {
