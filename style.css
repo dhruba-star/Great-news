@@ -20,17 +20,17 @@
 body {
   background: var(--bg-light);
   color: var(--text-dark);
-  transition: var(--transition);
-  width: 100%;
-  min-height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
+  width: 100%;
+  min-height: 100vh;
+  transition: var(--transition);
 }
 
 header {
   background: white;
   color: var(--text-dark);
-  padding: 1rem 2rem;
+  padding: 0.8rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,45 +39,68 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid #ddd;
+  box-shadow: var(--shadow);
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: var(--primary-color);
-  margin-right: 2rem;
+  white-space: nowrap;
 }
-nav {
-  flex: 1;
+
+/* Navbar scroll container */
+.nav-scroll {
+  overflow-x: auto;
+  white-space: nowrap;
+  max-width: 100%;
+  scrollbar-width: none;
+}
+
+.nav-scroll::-webkit-scrollbar {
+  display: none;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: flex-start;
-  gap: 1.5rem;
-  margin: 0;
+  gap: 0.6rem;
+  flex-wrap: nowrap;
   padding: 0;
+  margin: 0;
+}
+
+/* Nav item with quotes and period */
+nav li {
+  font-size: 0.95rem;
+  font-weight: 500;
+  white-space: nowrap;
+  position: relative;
+}
+
+nav li::before {
+  content: '“';
+}
+
+nav li::after {
+  content: '”.';
+}
+
+nav li:last-child::after {
+  content: '”'; /* no period for the last item */
 }
 
 nav a {
   color: var(--text-dark);
   text-decoration: none;
-  font-weight: 500;
-  padding: 0.25rem 0.5rem;
-  transition: var(--transition);
+  padding: 0 0.2rem;
 }
 
-nav a:hover {
-  opacity: 0.8;
-  text-decoration: underline;
-}
-
+/* Mode toggle */
 #modeToggle {
-  background: var(--text-light);
-  color: var(--primary-color);
-  padding: 0.5rem 1rem;
+  background: var(--primary-color);
+  color: var(--text-light);
+  padding: 0.4rem 1rem;
   border: none;
   border-radius: 20px;
   cursor: pointer;
@@ -89,6 +112,7 @@ nav a:hover {
   transform: scale(1.05);
 }
 
+/* Main content layout */
 main {
   max-width: 1400px;
   margin: 0 auto;
@@ -198,19 +222,14 @@ button:focus {
 @media (max-width: 768px) {
   header {
     flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
+    gap: 0.8rem;
+    align-items: flex-start;
   }
-  
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
+
   .featured {
     padding: 1.5rem;
   }
-  
+
   .news-section {
     grid-template-columns: 1fr;
     padding: 1rem 0;
