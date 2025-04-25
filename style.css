@@ -20,6 +20,7 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  width:100%;
 }
 
 .logo {
@@ -81,11 +82,11 @@ nav a {
 .news-card h3 {
   margin: 1rem 0 0.5rem;
   color: #d10000;
-  font-size:2em;
+
 }
 .news-card p {
   color:black;
-  font-size:2em;
+  
 }
   
 
