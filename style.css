@@ -69,6 +69,7 @@ nav ul {
   padding: 0;
   margin: 0;
   min-width: max-content;
+  list-style:none;/*removes •*/
 }
 
 /* Nav item with quotes and period */
