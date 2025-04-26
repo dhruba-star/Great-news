@@ -135,11 +135,13 @@ main {
   border-radius: 10px;
   box-shadow: var(--shadow);
   transition: var(--transition);
+  text-decoration:none;
 }
 
 .news-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  color:blue;
 }
 
 .news-card img {
@@ -163,10 +165,6 @@ main {
 .news-card .date {
   font-size: 0.8rem;
   color: #666;
-}
-.news-card  a {
-  text-decoration:none;
-  color:inherit;
 }
 footer {
   text-align: center;
