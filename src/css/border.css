@@ -1,1 +1,13 @@
+/* Apply a light gray border to the main sections */
+header, main, footer, .news-card, .sidebar {
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px; /* Rounded corners (optional) */
+  padding: 10px; /* Some inner space */
+  margin: 10px; /* Some outer space */
+}
 
+/* Optional: Make the sidebar header separate */
+.sidebar-header {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
