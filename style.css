@@ -247,7 +247,74 @@ button:focus {
   outline: 2px solid var(--primary-color);
   outline-offset: 2px;
 }
+/* Three Dot Button */
+.menu-toggle {
+  font-size: 2rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: black; /* or white depending on your header background */
+  padding: 0.5rem;
+}
 
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  transition: right 0.3s ease;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#modeToggle {
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+  background: #d10000; /* red color like Prothom Alo */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Dark mode (optional, if you want it later) */
+body.dark {
+  background: #121212;
+  color: white;
+}
+
+body.dark .sidebar {
+  background: #222;
+}
+
+body.dark #modeToggle {
+  background: white;
+  color: #d10000;
+}
 /* Responsive adjustments */
 @media (max-width: 768px) {
   header {
