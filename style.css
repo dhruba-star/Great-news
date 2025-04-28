@@ -26,6 +26,7 @@ body {
   min-height: 100vh;
   transition: var(--transition);
   overflow-x: hidden;
+  overflow-y:auto;
 }
 
 header {
@@ -42,6 +43,7 @@ header {
   z-index: 100;
   box-shadow: var(--shadow);
   transition:top 0.3s ease;
+  overflow-x: hidden;
 }
 
 .logo {
