@@ -63,3 +63,23 @@ window.addEventListener('resize', () => {
   header.style.transform = 'translateY(0)';
   navScroll.style.transform = 'translateY(0)';
 });
+
+  const menuToggle = document.getElementById('menuToggle');
+  const sidebar = document.getElementById('sidebar');
+  const closeSidebar = document.getElementById('closeSidebar');
+  const modeToggle = document.getElementById('modeToggle');
+
+  // Open sidebar when clicking 3 dots
+  menuToggle.addEventListener('click', () => {
+    sidebar.classList.add('active');
+  });
+
+  // Close sidebar when clicking X
+  closeSidebar.addEventListener('click', () => {
+    sidebar.classList.remove('active');
+  });
+
+  // Dark mode toggle
+  modeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+  });
