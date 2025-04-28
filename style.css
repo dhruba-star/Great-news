@@ -42,8 +42,8 @@ header {
   top: 0;
   z-index: 100;
   box-shadow: var(--shadow);
-  transition:top 0.3s ease;
-  overflow-x: hidden;
+  transition:top 0.1s ease;
+  overflow-x: auto;
 }
 
 .logo {
