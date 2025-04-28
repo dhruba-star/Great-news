@@ -54,16 +54,27 @@ header {
 }
 
 /* Navbar scroll container */
+/* Add these styles to your existing CSS */
+
+.nav-scroll-wrapper {
+  position: relative;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  max-width: 100%;
+}
+
 .nav-scroll {
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
-  max-width: 100%;
-  flex: 1;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  width: calc(100% - 40px); /* Leave space for the menu button */
 }
 
 .nav-scroll::-webkit-scrollbar {
-  display: none;
+  display: none; /* Chrome, Safari, Opera */
 }
 
 nav ul {
@@ -71,16 +82,36 @@ nav ul {
   gap: 0.6rem;
   padding: 0;
   margin: 0;
-  min-width: max-content;
-  list-style:none;/*removes •*/
+  list-style: none;
 }
 
-/* Nav item with quotes and period */
-nav li {
-  font-size: 0.95rem;
-  font-weight: 500;
-  white-space: nowrap;
-  position: relative;
+.menu-toggle {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0 10px;
+  z-index: 1;
+}
+
+/* Dark mode styles */
+body.dark .menu-toggle {
+  background: #222;
+  color: white;
+}
+
+/* Ensure the menu toggle is clickable */
+.menu-toggle {
+  pointer-events: auto;
+}
+
+/* Optional: Add some hover effects */
+.menu-toggle:hover {
+  color: var(--primary-color);
 }
 
 nav a {
