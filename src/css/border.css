@@ -1,13 +1,13 @@
-/* Apply a light gray border to the main sections */
-header, main, footer, .news-card, .sidebar {
-  border: 1px solid #ccc; /* Light gray border */
-  border-radius: 5px; /* Rounded corners (optional) */
-  padding: 10px; /* Some inner space */
-  margin: 10px; /* Some outer space */
+/* Remove any background/border-radius from .news-card */
+.news-card {
+  background: none;
+  border-radius: 0;
+  padding: 16px 0;            /* vertical padding */
+  border-bottom: 1px solid #e0e0e0;  /* light grey line */
+  margin: 0;                  /* no extra margin */
 }
 
-/* Optional: Make the sidebar header separate */
-.sidebar-header {
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 10px;
+/* Don’t draw a line after the last card */
+.news-card:last-child {
+  border-bottom: none;
 }
