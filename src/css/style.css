@@ -85,6 +85,9 @@ nav ul {
   list-style: none;
   color: #000000;
 }
+nav li {
+  color:#0a0a0a;
+}
 
 .menu-toggle {
   position: absolute;
