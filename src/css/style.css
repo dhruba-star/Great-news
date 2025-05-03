@@ -92,7 +92,7 @@ nav ul {
 .menu-toggle {
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 30%;
   transform: translateY(-50%);
   background: white;
   border: none;
@@ -101,6 +101,7 @@ nav ul {
   padding: 0 10px;
   z-index: 1;
   max-height:45px;
+  width:45px;
 }
 
 /* Dark mode styles */
@@ -116,7 +117,7 @@ body.dark .menu-toggle {
 
 /* Optional: Add some hover effects */
 .menu-toggle:hover {
-  color: var(--primary-color);
+  color: blue;
 }
 
 nav a {
