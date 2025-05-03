@@ -5,10 +5,6 @@
 }
 .menu-toggle{
   border-left:1px solid #e0e0e0;
+  border-sizing:border-box;
 }
-.menutoggle::after {
-  top: 5px; /* how far from top */
-  right: 0;
-  width: 0;
-  height: 90%; /* shorter than full height */
-}
+
