@@ -100,7 +100,7 @@ nav ul {
   cursor: pointer;
   padding: 0 10px;
   z-index: 1;
-  max-height:20px;
+  max-height:35px;
 }
 
 /* Dark mode styles */
